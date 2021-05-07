@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#222222;stroke-width:13;stroke-miterlimit:10;}
+	.st1{fill:#222222;}
+	.st2{fill:#2CA4EE;}
+</style>
+<title>ic-sv-qr-code</title>
+<path class="st0" d="M401.5,102.7h-293c-5.4,0-9.8,4.4-9.8,9.8v293c0,5.4,4.4,9.8,9.8,9.8h293c5.4,0,9.8-4.4,9.8-9.8v-293
+	C411.3,107.1,406.9,102.7,401.5,102.7z"/>
+<path class="st1" d="M147.6,151.5h29.3V132h-39.1c-5.4,0-9.8,4.4-9.8,9.8v39.1h19.5L147.6,151.5L147.6,151.5z"/>
+<path class="st1" d="M362.4,180.8H382v-39.1c0-5.4-4.4-9.8-9.8-9.8h-39.1v19.5h29.3V180.8z"/>
+<path class="st1" d="M137.8,385.9h39.1v-19.5h-29.3v-29.3H128v39.1C128,381.5,132.4,385.9,137.8,385.9z"/>
+<path class="st1" d="M362.4,366.4h-29.3v19.5h39.1c5.4,0,9.8-4.4,9.8-9.8V337h-19.5v29.4H362.4z"/>
+<path class="st2" d="M128,249.2h254v19.5H128V249.2z"/>
+</svg>

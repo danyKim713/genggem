@@ -1,0 +1,186 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<? include "./inc_program.php"; ?>
+<? include "./inc_Head.php"; ?>
+<link rel="stylesheet" href="assets/css/sub.css">
+<link href="assets/lib/lightbox2/dist/css/lightbox.min.css" rel="stylesheet">
+<script src="assets/lib/lightbox2/dist/js/lightbox.min.js"></script>
+
+
+
+<?php
+if(!$pageNo){
+	$pageNo = 1;
+}
+ 
+$pageScale = 10;
+
+$pageStartNo = ($pageNo -1)*$pageScale;
+
+$tableName = "tbl_transmit";
+$orderBy = " ORDER BY transmit_date DESC ";
+
+
+$start_from= $_GET['start_from'];
+$end_to= $_GET['end_to'];
+	
+if ($start_from == "") {
+    $start_from = date("Y-m-d", mktime(0,0,0,date("m")-1, date("d"), date("Y")));
+}
+if ($end_to == "") {
+    $end_to = date("Y-m-d"); //진짜
+}
+
+
+$where = " where sender_id = '".$member_id."' and transmit_method  != 'TRANS_PAYBACK'";
+ 
+if ($start_from) {
+    $where .= " and  left(transmit_date,10)  >= '$start_from'";
+   }
+if ($end_to) {
+    $where .= " and  left(transmit_date,10)  <= '$end_to'";
+}
+
+$start = ($pageNo-1)*$pageScale;
+
+$query = "select B.*, A.* from tbl_transmit A 
+				INNER JOIN tbl_member B
+                	ON A.receiver_id = B.member_id
+".$where. $orderBy;
+$query .= " LIMIT ".$start.", ".$pageScale;
+
+// echo $query;
+//echo $where;
+$result = db_query($query);
+$num=db_result("select count(transmit_id) from tbl_transmit A $where");
+
+$display = $num - ($pageNo-1)*$pageScale;
+?>
+
+</head>
+
+<body>
+<?
+$_TITLE = '보낸내역보기';
+$_BACK_LINK = "";
+$sub = true
+?>
+<? include "./inc_Top.php"; ?>
+<form name="frm_page" id="frm_page" method="get">
+ <input type="hidden" name="pageNo" id="pageNo" value="<?=$_GET['pageNo']?>">
+ <section class="py-0">
+  <div class="container-fluid">
+   <div class="row align-items-center text-center justify-content-center">
+    <div class="wrap-sendlist col-sm-12 col-lg-6 p-4"> 
+     
+     <!--date-->
+     
+     <div class="con-datepicker row col-10 mb-4 clearfix">
+      <div class="input-daterange input-group float-left" id="datepicker">
+       <input type="text" class="input-sm form-control" name="start_from" value="<?=$start_from?>" />
+       <span class="input-group-addon">-</span>
+       <input type="text" class="input-sm form-control" name="end_to" value="<?=$end_to?>" />
+      </div>
+      <button type="button" class="btn btn-outline-info btn-search" id="btn-search" onClick="javascript:go_search()"><i class="fas fa-search"></i></button>
+     </div>
+     
+     <!--//date-->
+     
+     <div>
+      <?php
+
+			if (mysqli_num_rows($result) ==0) { ?>
+      <div class="li-list row align-items-center p-3" style="text-align:center"> 보내신 내역이 없습니다. </div>
+      <? } ?>
+      <?php
+            for ($i = 0; $i < mysqli_num_rows($result); $i++) {
+                $row = mysqli_fetch_array($result);
+            ?>
+      
+      <!--list 반복-->
+      
+      <div class="li-list row align-items-center p-3">
+       <div class="con-user">
+        <?php 	if($row['photo']) { ?>
+        <img src="/_UPLOAD/<?php echo $_COOKIE['ck_login_user_photo'] ?>" alt="사용지 기본이미지">
+        <?php } else { ?>
+        <img src="images/user.png" alt="사용지 기본이미지">
+        <?php }?>
+       </div>
+       <div class="con-info pl-3 text-left">
+        <p class="mb-0"> <span class="uid bar">UID <?php echo $row['UID']?></span> <span class="num"><?php echo get_masking_string($row['hp'], 2,4)?></span> 
+         
+         <!--전송완료 text-muted , 전송실패 text-danger--> 
+         
+         <span class="case <?php $row['state'] =="전송실패"? " text-danger " :" text-muted "?> float-right "><?php echo $row['state']?></span> </p>
+        <p class="mb-0"> <span class="date <?php $row['state'] =="전송실패"? " text-danger " :" text-muted "?>"><?php echo $row['transmit_date']?></span> <span class="pay float-right"><strong><?php echo number_format($row['amount'])?></strong> PAY</span> </p>
+       </div>
+      </div>
+      <? }?>
+     </div>
+     
+     <!--pagination-->
+     
+     <? include ("_paging.php");?>
+     
+     <!--  <nav aria-label="Page navigation" class="row mt-4 align-items-center justify-content-center">
+
+            <ul class="pagination">
+
+              <li class="page-item"><a class="page-link" href="javascript:void(0)"><i class="fas fa-chevron-left"></i></a></li>
+
+              <li class="page-item active"><a class="page-link" href="javascript:void(0)">1</a></li>
+
+              <li class="page-item"><a class="page-link" href="javascript:void(0)">2</a></li>
+
+              <li class="page-item"><a class="page-link" href="javascript:void(0)">3</a></li>
+
+              <li class="page-item"><a class="page-link" href="javascript:void(0)"><i class="fas fa-chevron-right"></i></a></li>
+
+            </ul>
+
+          </nav>--> 
+     
+     <!--//pagination--> 
+     
+    </div>
+   </div>
+  </div>
+ </section>
+</form>
+<script>
+
+    $('.con-datepicker .input-daterange').datepicker({
+
+      language: 'kr',
+
+      format: 'yyyy-mm-dd',
+
+      maxViewMode: 1,
+
+      todayBtn: true
+
+    });
+
+  </script>
+</body>
+</html>
+<? include "./inc_Bottom.php"; ?>
+<script language="JavaScript" type="text/javascript">
+		function go_search() {
+			frm_page.action = "<?=$PHP_SELF?>";
+			frm_page.target = "_self";
+			frm_page.submit();
+		}
+
+/*      $( document ).ready( function() {
+		
+				$('#btn-search').click(function () {
+					alert(1);
+						frm_page.action = "<?=$PHP_SELF?>";
+						frm_page.target = "_self";
+						frm_page.submit();					}
+				});	  
+		});	  */
+ 
+</script>

@@ -1,0 +1,107 @@
+@font-face {
+  font-family: 'biko-icon';
+  src:  url('fonts/biko-icon.eot?xyhlze');
+  src:  url('fonts/biko-icon.eot?xyhlze#iefix') format('embedded-opentype'),
+    url('fonts/biko-icon.ttf?xyhlze') format('truetype'),
+    url('fonts/biko-icon.woff?xyhlze') format('woff'),
+    url('fonts/biko-icon.svg?xyhlze#biko-icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'biko-icon' ;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.biko-left-arrow-3:before {
+  content: "\e91a";
+}
+.biko-right-arrow-3:before {
+  content: "\e919";
+}
+.biko-forward:before {
+  content: "\e918";
+}
+.biko-user1:before {
+  content: "\e917";
+}
+.biko-avatar:before {
+  content: "\e916";
+}
+.biko-scan2:before {
+  content: "\e915";
+}
+.biko-scan:before {
+  content: "\e911";
+}
+.biko-service:before {
+  content: "\e912";
+}
+.biko-user:before {
+  content: "\e913";
+}
+.biko-wallet:before {
+  content: "\e914";
+}
+.biko-home:before {
+  content: "\e908";
+}
+.biko-left-arrow-2:before {
+  content: "\e909";
+}
+.biko-menu_w:before {
+  content: "\e90a";
+}
+.biko-power:before {
+  content: "\e90b";
+}
+.biko-question:before {
+  content: "\e90c";
+}
+.biko-right-arrow-2:before {
+  content: "\e90d";
+}
+.biko-warning:before {
+  content: "\e90e";
+}
+.biko-ellipsis:before {
+  content: "\e90f";
+}
+.biko-remove:before {
+  content: "\e910";
+}
+.biko-check:before {
+  content: "\e906";
+}
+.biko-checked:before {
+  content: "\e907";
+}
+.biko-down-arrow2:before {
+  content: "\e900";
+}
+.biko-up-arrow2:before {
+  content: "\e905";
+}
+.biko-document:before {
+  content: "\e901";
+}
+.biko-info-round:before {
+  content: "\e902";
+}
+.biko-list-heart:before {
+  content: "\e903";
+}
+.biko-menu1:before {
+  content: "\e904";
+}

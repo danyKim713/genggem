@@ -1,0 +1,40 @@
+<html>
+
+<head>
+  <script src="./socket.io.js"></script>
+  <script src="./echo.iife.js"></script>
+  <script>
+    //	var wsUri = "wss://api-bikochain.sotatek.com/api/v2/balance?signature=";
+    // var socketUrl = "https://socket.bikochain.com:6001"; //main server
+    var socketUrl = "https://bikochain.sotatek.com:6001"; //staging server
+
+    var echoClient;
+
+    function init() {
+      output = document.getElementById("output");
+      doWebSocket();
+    }
+
+    function doWebSocket() {
+      echoClient = new Echo({
+        broadcaster: 'socket.io',
+        host: socketUrl,
+      });
+      listenForPrices();
+    }
+
+    function listenForPrices() {
+      echoClient.channel('App.Prices')
+        .listen('PricesUpdated', (newPrices) => {
+          console.log(newPrices);
+        });
+    }
+    window.addEventListener("load", init, false);
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

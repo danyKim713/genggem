@@ -1,0 +1,381 @@
+@font-face {
+  font-family: 'pay-icon';
+  src:  url('fonts/pay-icon.eot?ucik2j');
+  src:  url('fonts/pay-icon.eot?ucik2j#iefix') format('embedded-opentype'),
+    url('fonts/pay-icon.ttf?ucik2j') format('truetype'),
+    url('fonts/pay-icon.woff?ucik2j') format('woff'),
+    url('fonts/pay-icon.svg?ucik2j#pay-icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'pay-icon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ic-japan-flag .path1:before {
+  content: "\e935";
+  color: rgb(240, 240, 240);
+}
+.ic-japan-flag .path2:before {
+  content: "\e936";
+  margin-left: -1em;
+  color: rgb(216, 0, 39);
+}
+.ic-south-korea-flag .path1:before {
+  content: "\e937";
+  color: rgb(240, 240, 240);
+}
+.ic-south-korea-flag .path2:before {
+  content: "\e938";
+  margin-left: -1em;
+  color: rgb(216, 0, 39);
+}
+.ic-south-korea-flag .path3:before {
+  content: "\e939";
+  margin-left: -1em;
+  color: rgb(0, 82, 180);
+}
+.ic-south-korea-flag .path4:before {
+  content: "\e93a";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.ic-south-korea-flag .path5:before {
+  content: "\e93b";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.ic-south-korea-flag .path6:before {
+  content: "\e93c";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.ic-south-korea-flag .path7:before {
+  content: "\e93d";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.ic-south-korea-flag .path8:before {
+  content: "\e93e";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.ic-south-korea-flag .path9:before {
+  content: "\e93f";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.ic-south-korea-flag .path10:before {
+  content: "\e940";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.ic-south-korea-flag .path11:before {
+  content: "\e941";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.ic-south-korea-flag .path12:before {
+  content: "\e942";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.ic-south-korea-flag .path13:before {
+  content: "\e943";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.ic-south-korea-flag .path14:before {
+  content: "\e944";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.ic-south-korea-flag .path15:before {
+  content: "\e945";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.ic-south-korea-flag .path16:before {
+  content: "\e946";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.ic-south-korea-flag .path17:before {
+  content: "\e947";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.ic-south-korea-flag .path18:before {
+  content: "\e948";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.ic-south-korea-flag .path19:before {
+  content: "\e949";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.ic-south-korea-flag .path20:before {
+  content: "\e94a";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.ic-south-korea-flag .path21:before {
+  content: "\e94b";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.ic-united-states-flag .path1:before {
+  content: "\e94c";
+  color: rgb(240, 240, 240);
+}
+.ic-united-states-flag .path2:before {
+  content: "\e94d";
+  margin-left: -1em;
+  color: rgb(216, 0, 39);
+}
+.ic-united-states-flag .path3:before {
+  content: "\e94e";
+  margin-left: -1em;
+  color: rgb(216, 0, 39);
+}
+.ic-united-states-flag .path4:before {
+  content: "\e94f";
+  margin-left: -1em;
+  color: rgb(216, 0, 39);
+}
+.ic-united-states-flag .path5:before {
+  content: "\e950";
+  margin-left: -1em;
+  color: rgb(216, 0, 39);
+}
+.ic-united-states-flag .path6:before {
+  content: "\e951";
+  margin-left: -1em;
+  color: rgb(0, 82, 180);
+}
+.ic-china-flag .path1:before {
+  content: "\e952";
+  color: rgb(216, 0, 39);
+}
+.ic-china-flag .path2:before {
+  content: "\e953";
+  margin-left: -1em;
+  color: rgb(255, 218, 68);
+}
+.ic-china-flag .path3:before {
+  content: "\e954";
+  margin-left: -1em;
+  color: rgb(255, 218, 68);
+}
+.ic-china-flag .path4:before {
+  content: "\e955";
+  margin-left: -1em;
+  color: rgb(255, 218, 68);
+}
+.ic-china-flag .path5:before {
+  content: "\e956";
+  margin-left: -1em;
+  color: rgb(255, 218, 68);
+}
+.ic-china-flag .path6:before {
+  content: "\e957";
+  margin-left: -1em;
+  color: rgb(255, 218, 68);
+}
+.ic-user1 .path1:before {
+  content: "\e90b";
+  color: rgb(231, 236, 237);
+}
+.ic-user1 .path2:before {
+  content: "\e90e";
+  margin-left: -1em;
+  color: rgb(85, 96, 128);
+}
+.ic-logo-tec:before {
+  content: "\e95d";
+}
+.ic-equal:before {
+  content: "\e95c";
+}
+.ic-coupon:before {
+  content: "\e95b";
+}
+.ic-search:before {
+  content: "\e95a";
+}
+.ic-up-arrow:before {
+  content: "\e959";
+}
+.ic-success:before {
+  content: "\e958";
+}
+.ic-down-arrow:before {
+  content: "\e934";
+}
+.ic-upload:before {
+  content: "\e933";
+}
+.ic-search-circular:before {
+  content: "\e92a";
+}
+.ic-left-arrow-circular:before {
+  content: "\e92b";
+}
+.ic-like-circular:before {
+  content: "\e92c";
+}
+.ic-minus-circular:before {
+  content: "\e92d";
+}
+.ic-refresh-circular:before {
+  content: "\e92e";
+}
+.ic-right-arrow-circular:before {
+  content: "\e92f";
+}
+.ic-add-circular:before {
+  content: "\e930";
+}
+.ic-close-circular:before {
+  content: "\e931";
+}
+.ic-favourite-circular:before {
+  content: "\e932";
+}
+.ic-circular:before {
+  content: "\e929";
+}
+.ic-verified-o:before {
+  content: "\e928";
+}
+.ic-camera:before {
+  content: "\e927";
+}
+.ic-images:before {
+  content: "\e926";
+}
+.ic-qr:before {
+  content: "\e925";
+}
+.ic-qr-code:before {
+  content: "\e924";
+}
+.ic-house-outline:before {
+  content: "\e922";
+}
+.ic-home:before {
+  content: "\e923";
+}
+.ic-plus:before {
+  content: "\e921";
+}
+.ic-send:before {
+  content: "\e911";
+}
+.ic-faq:before {
+  content: "\e912";
+}
+.ic-qna:before {
+  content: "\e913";
+}
+.ic-wallet:before {
+  content: "\e914";
+}
+.ic-gift:before {
+  content: "\e915";
+}
+.ic-point:before {
+  content: "\e916";
+}
+.ic-login:before {
+  content: "\e917";
+}
+.ic-good:before {
+  content: "\e918";
+}
+.ic-delivery-not:before {
+  content: "\e919";
+}
+.ic-delivery-re:before {
+  content: "\e91a";
+}
+.ic-delivery-trans:before {
+  content: "\e91b";
+}
+.ic-card:before {
+  content: "\e91c";
+}
+.ic-store:before {
+  content: "\e91d";
+}
+.ic-map:before {
+  content: "\e91e";
+}
+.ic-delivery:before {
+  content: "\e91f";
+}
+.ic-notice:before {
+  content: "\e920";
+}
+.ic-power:before {
+  content: "\e90f";
+}
+.ic-power1:before {
+  content: "\e910";
+}
+.ic-cancel:before {
+  content: "\e90a";
+}
+.ic-menu:before {
+  content: "\e90d";
+}
+.ic-verified:before {
+  content: "\e90c";
+}
+.ic-box:before {
+  content: "\e900";
+}
+.ic-credit-card:before {
+  content: "\e901";
+}
+.ic-debit-card:before {
+  content: "\e902";
+}
+.ic-left-arrow:before {
+  content: "\e903";
+}
+.ic-payment-method:before {
+  content: "\e904";
+}
+.ic-resume:before {
+  content: "\e905";
+}
+.ic-right-arrow:before {
+  content: "\e906";
+}
+.ic-shop:before {
+  content: "\e907";
+}
+.ic-shopping-cart:before {
+  content: "\e908";
+}
+.ic-user:before {
+  content: "\e909";
+}
+
+.ic-info-round:before {
+  content: "\e910";
+}
